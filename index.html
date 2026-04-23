@@ -1,145 +1,321 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Jonah Horowitz</title>
-	<meta name="description" content="Jonah Horowitz" />
-	<meta name="keywords" content="Jonah,Horowitz,Jonah Horowitz,Systems Administrator" />
-	<meta name="author" content="Jonah Horowitz" />
-	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<style type="text/css">		
-        body, html {
-            height: 100%; 
-            margin: 0; 
-            padding: 0;
-            background-image:url('black-Linen.png');
-            z-index: -2;
-        }
-        p {
-            font-family: "Andale Mono", Monaco, Courier, "Courier New", monospace;
-        }
-        p.name {
-            display: table-cell; 
-            text-align: center;
-            display: block; 
-            font-size:150%;
-            color: lime;
-        }    
-        .subname {
-            display: table-cell; 
-            text-align: center;
-            display: block; 
-            font-size:100%;
-            color: white;
-            }    
-
-        div {
-            font-family: "Andale Mono", Monaco, Courier, "Courier New", monospace;
-            }
-        div.homeouter { 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%;
-            position: absolute; 
-            display: table 
-        }
-        div.homeinner { 
-            z-index: 2;
-            position: absolute; 
-            top: 40%;
-            width: 100%;
-        }
-        div.homeinner span {
-            -webkit-animation: blink 1s infinite;
-            animation: blink 1s infinite;
-        }
-        div.contact {
-            z-index: 2;
-            position: absolute;
-            top: 90%;
-            left: 20px;
-        }
-        div.container {
-           position: relative;
-            z-index: 0;
-        }
-        div.background {
-            z-index: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            overflow: hidden;
-            -webkit-animation: type2 4s steps(60, end);
-            animation: type2 4s steps(60, end); 
-        }
-        div.background p{
-            color: #143314;            
-        }
-        @-webkit-keyframes type{ 
-          from { width: 0; } 
-        }
-        @keyframes type{ 
-          from { width: 0; } 
-        } 
-
-        @-webkit-keyframes type2{
-            0%{width: 0;}
-            50%{width: 0;}
-            100%{ width: 100; } 
-        } 
-
-        @keyframes type2{
-            0%{width: 0;}
-            50%{width: 0;}
-            100%{ width: 100; } 
-        } 
-        @-webkit-keyframes blink{
-            to{opacity: .0;}
-        } 
-        @keyframes blink{
-            to{opacity: .0;}
-        }
-	</style>
-<!-- Quantcast Tag, part 1 --> 
-<script type="text/javascript">
-  var _qevents = _qevents || [];
-
-  (function() {
-   var elem = document.createElement('script');
-
-   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
-   elem.async = true;
-   elem.type = "text/javascript";
-   var scpt = document.getElementsByTagName('script')[0];
-   scpt.parentNode.insertBefore(elem, scpt);  
-  })();
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonah Horowitz | Staff Site Reliability Engineer</title>
+    <meta name="description" content="Jonah Horowitz - Staff Site Reliability Engineer with 20+ years experience scaling mission-critical infrastructure." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="homeouter">
-        <div class="homeinner">
-                <p class="name">Jonah Horowitz<span>_</span></p>
-                <p class="subname">Senior Site Reliability Engineer<br />Lead Production Engineer</p>
+    <div class="noise-overlay"></div>
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">JH</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#presentations">Presentations</a></li>
+            </ul>
         </div>
-        <div class="contact">
-            <p>
-                <a href="resume.pdf"><img src="resume.png" alt="resume"></a>
-                <a href="mailto:incoming@jonahhorowitz.com"><img src="email.png" alt="email"></a>
-                <a href="http://www.linkedin.com/in/jonahhorowitz"><img src="linkedin.png" alt="linkedin"></a>
-                <a href="https://github.com/jonahhorowitz"><img src="github.png" alt="github"></a>
-                <a href="https://www.twitter.com/jonahhorowitz"><img src="twitter.png" alt="twitter"></a>
-                <a href="https://medium.com/@jonahhorowitz"><img src="medium.png" alt="medium"></a>
-                <a href="http://jonahhorowitz.brandyourself.com/"><img src="brand.png" alt="brandyourself"></a>
-            </p>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text animate-fade-up">
+                <h2 class="greeting">Hello, I'm</h2>
+                <h1 class="name">Jonah Horowitz</h1>
+                <h3 class="title">Staff Site Reliability Engineer</h3>
+                <p class="location">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    San Francisco, CA
+                </p>
+                <div class="social-links">
+                    <a href="mailto:incoming@jonahhorowitz.com" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+                    <a href="http://www.linkedin.com/in/jonahhorowitz" title="LinkedIn" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    <a href="https://github.com/jonahhorowitz" title="GitHub" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                    <a href="resume.pdf" class="btn primary-btn" target="_blank">View Resume</a>
+                </div>
+            </div>
+            <div class="hero-graphic animate-fade-up" style="animation-delay: 0.2s;">
+                <div class="abstract-shape">
+                    <div class="inner-shape"></div>
+                    <div class="orbiting-dot"></div>
+                </div>
+            </div>
         </div>
-    </div>
-<!-- Quantcast Tag, part 2 --> 
-<script type="text/javascript"> _qevents.push( { qacct:"p-3elrlpWlFIEfg"} ); </script> 
-    <noscript> <div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-3elrlpWlFIEfg.gif"
-    height="1" width="1" alt="Quantcast"/>
-</div> 
-</noscript> 
-</body> 
+    </header>
+
+    <main>
+        <section id="about" class="container reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="glass-card about-card">
+                <p>Staff Site Reliability Engineer with <strong>20+ years experience</strong> scaling mission-critical infrastructure supporting millions of users. Expert in building fault-tolerant, secure systems that enable rapid innovation while maintaining high reliability.</p>
+                <p>Passionate about leveraging automation and modern cloud-native technologies to solve complex infrastructure challenges at unprecedented scale. Thrive in high-ambiguity environments, bringing clarity and execution focus to complex infrastructure challenges.</p>
+            </div>
+        </section>
+
+        <section id="experience" class="container reveal">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-header">
+                            <div>
+                                <h3>Staff Engineer</h3>
+                                <h4>Apple</h4>
+                            </div>
+                            <div class="job-meta">
+                                <span class="date">March 2023 - Present</span>
+                                <span class="location">Cupertino, CA</span>
+                            </div>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Architected and led a migration of 280 services from a legacy infrastructure to a cloud-native platform, improving reliability, maintainability, and security while also lowering support costs and team toil.</li>
+                            <li>Migrated critical encryption key distribution from a legacy system to a centralized Key Management System, automating rollouts, eliminating manual toil, and significantly improving security posture.</li>
+                            <li>Established SLO framework across 280 services and 16 partner teams bringing critical focus to reliability gaps.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-header">
+                            <div>
+                                <h3>Engineering Manager</h3>
+                                <h4>Apple</h4>
+                            </div>
+                            <div class="job-meta">
+                                <span class="date">January 2018 - March 2023</span>
+                                <span class="location">Cupertino, CA</span>
+                            </div>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Refactored the configuration management system to remove duplicate and conflicting systems.</li>
+                            <li>Grew site reliability engineering team from four engineers to 15 across 3 sub-teams.</li>
+                            <li>Designed and implemented a new interview process for site reliability engineers used across 50 peer managers.</li>
+                            <li>Leveraged SLOs with product engineering partners to measure and maintain service reliability over 99.99%.</li>
+                            <li>Created a new post incident review process and drove adoption across the larger organization.</li>
+                            <li>Maintained high team morale and productivity during numerous reorganizations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-header">
+                            <div>
+                                <h3>Site Reliability Engineer</h3>
+                                <h4>Stripe</h4>
+                            </div>
+                            <div class="job-meta">
+                                <span class="date">March 2017 - January 2018</span>
+                                <span class="location">San Francisco, CA</span>
+                            </div>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Drove our "carrot" effort, a tool that scanned Stripe services for reliability risks and made suggestions for teams to improve their reliability.</li>
+                            <li>Built an internal dashboard to show which code paths were struggling with availability and followed up with the responsible teams.</li>
+                            <li>Designed and implemented a production readiness review process for new services.</li>
+                            <li>Reorganized the Stripe post-mortem and incident review process to make sure that we could track metrics from incidents and drive follow-up for remediation items.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-header">
+                            <div>
+                                <h3>Senior Site Reliability Engineer</h3>
+                                <h4>Netflix</h4>
+                            </div>
+                            <div class="job-meta">
+                                <span class="date">April 2015 - January 2017</span>
+                                <span class="location">Los Gatos, CA</span>
+                            </div>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Drove our "production ready" effort, a checklist of important reliability steps for development teams, and developed a tool that scanned Netflix microservices for reliability risks and made suggestions for teams to improve their reliability.</li>
+                            <li>Consulted with microservice teams to drive reliability efforts, including adding monitoring, alerting, deployment practices, application tuning and chaos resiliency. This effort significantly increased the percentage of critical infrastructure teams that had effective monitoring and alerting.</li>
+                            <li>Lead post-mortem incident reviews to identify root cause and ensure remediation and created a new "after-incident report" process so single page write-ups of incident learnings could be communicated broadly throughout Netflix.</li>
+                            <li>Participated in oncall rotation and incident response, initial triage, ensuring communication and making sure engineering teams were focused on mitigating customer impact during major outages.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-header">
+                            <div>
+                                <h3>Lead Production Engineer</h3>
+                                <h4>Quantcast</h4>
+                            </div>
+                            <div class="job-meta">
+                                <span class="date">January 2011 - April 2015</span>
+                                <span class="location">San Francisco, CA</span>
+                            </div>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Built and maintained bare metal, high-performance AI/ML clusters supporting large-scale data processing and machine learning workloads.</li>
+                            <li>Expanded Quantcast's systems, supporting 10x growth while containing costs and keeping response times under 100ms.</li>
+                            <li>Mentored junior operations engineers and new graduates, from onboarding to training them in large scale system operations and troubleshooting.</li>
+                            <li>Managed Quantcast's capacity planning and budget, building out 17 edge PoPs worldwide while maintaining capacity and performance goals.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item collapse-previous">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card condensed-roles">
+                        <div class="condensed-header" id="toggle-early-career">
+                            <h3>Early Career (2000 - 2010)</h3>
+                            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg>
+                        </div>
+                        <div class="condensed-body">
+                            <div class="early-role">
+                                <strong>Engineering Manager & Software Engineer</strong> @ Looksmart <em>(Aug 2007 - Dec 2010)</em>
+                            </div>
+                            <div class="early-role">
+                                <strong>Software Engineer</strong> @ Gemini Mobile Technologies <em>(Jan 2006 - Aug 2007)</em>
+                            </div>
+                            <div class="early-role">
+                                <strong>Software Engineer</strong> @ MediaMaster <em>(Jun 2004 - Dec 2005)</em>
+                            </div>
+                            <div class="early-role">
+                                <strong>System Administrator</strong> @ Walmart.com <em>(Jun 2000 - Sep 2002)</em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="container reveal">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>AWS, GCP, Kubernetes, Docker, Terraform, Helm, IaC</p>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <h3>Programming</h3>
+                    <p>Python, Go, AI-Assisted Development (Claude Code)</p>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3>Observability</h3>
+                    <p>Prometheus, Grafana, OpenTelemetry</p>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h3>SRE Practices</h3>
+                    <p>SLI/SLO, Error Budgets, Chaos Engineering, Incident Response</p>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                    </div>
+                    <h3>Automation</h3>
+                    <p>Jenkins, Spinnaker, CI/CD pipelines, Infrastructure automation</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="presentations" class="container reveal">
+            <h2 class="section-title">Talks & Publications</h2>
+            <div class="cards-grid">
+                
+                <a href="https://www.usenix.org/conference/srecon17americas/program/presentation/horowitz" target="_blank" class="talk-card glass-card">
+                    <span class="tag">Talk</span>
+                    <span class="talk-date">SRECon 17 Americas (Mar 2017)</span>
+                    <h3>Ten Persistent SRE Antipatterns</h3>
+                    <p>Pitfalls on the Road to a Successful SRE Program.</p>
+                </a>
+
+                <a href="https://speakerdeck.com/jonahhorowitz/configuration-management-is-an-antipattern" target="_blank" class="talk-card glass-card">
+                    <span class="tag">Talk</span>
+                    <span class="talk-date">SCaLE 15x (Mar 2017)</span>
+                    <h3>Configuration Management is an Anti-pattern</h3>
+                    <p>Immutable Infrastructure.</p>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=O8RsX_BR9Lg" target="_blank" class="talk-card glass-card">
+                    <span class="tag">Talk</span>
+                    <span class="talk-date">Velocity Ignite 2016 (Jun 2016)</span>
+                    <h3>The Cloud Will Not Save You</h3>
+                    <p>From your technical debt.</p>
+                </a>
+
+                <a href="https://www.usenix.org/conference/srecon16/program/presentation/horowitz" target="_blank" class="talk-card glass-card">
+                    <span class="tag">Talk</span>
+                    <span class="talk-date">USENIX SREcon16 (Apr 2016)</span>
+                    <h3>Netflix: 190 Countries and 5 CORE SREs</h3>
+                    <p>How does Netflix scale SRE?</p>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=lZI51YzIgVE" target="_blank" class="talk-card glass-card">
+                    <span class="tag">Talk</span>
+                    <span class="talk-date">SCaLE 14x (Jan 2016)</span>
+                    <h3>From Sysadmin to SRE</h3>
+                    <p>How Netflix views the Site Reliability Engineer role.</p>
+                </a>
+
+                <div class="talk-card glass-card">
+                    <span class="tag pub-tag">Publication</span>
+                    <span class="talk-date">O'Reilly Media (Nov 2012)</span>
+                    <h3>Monitoring with Ganglia</h3>
+                    <p>Quantcast case study on metrics scaling and Holt-Winters aberrance detection.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="education" class="container reveal">
+            <h2 class="section-title">Education</h2>
+            <div class="glass-card flex-between">
+                <div>
+                    <h3>University of Cincinnati</h3>
+                    <p>Bachelors of Science in Computer Engineering</p>
+                </div>
+                <div class="text-right text-muted">
+                    <p>Cincinnati, OH</p>
+                    <p>2005</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Jonah Horowitz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
