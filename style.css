@@ -618,6 +618,10 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
     .nav-links {
         display: none; /* simple mobile nav */
     }
@@ -652,5 +656,17 @@ footer {
     
     .text-right {
         text-align: left;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .abstract-shape {
+        transform: scale(0.8);
     }
 }
